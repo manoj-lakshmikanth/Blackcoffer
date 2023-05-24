@@ -1,8 +1,9 @@
 import axios from 'axios';
+let backendURL = 'https://blackcoffer-backend-seven.vercel.app';
 
 export async function getData() {
   let options = {
-    url: 'http://localhost:8000/average',
+    url: `${backendURL}/average`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -10,7 +11,6 @@ export async function getData() {
   };
   try {
     let resp = await axios(options);
-    // console.log(resp);
     return { msg: 'success', resp };
   } catch (error) {
     console.log(error);
@@ -20,7 +20,7 @@ export async function getData() {
 
 export async function getEnergy() {
   let options = {
-    url: 'http://localhost:8000/energy',
+    url: `${backendURL}/energy`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -28,7 +28,6 @@ export async function getEnergy() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -37,7 +36,7 @@ export async function getEnergy() {
 
 export async function getManufacturing() {
   let options = {
-    url: 'http://localhost:8000/manufacturing',
+    url: `${backendURL}/manufacturing`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -45,7 +44,6 @@ export async function getManufacturing() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -54,7 +52,7 @@ export async function getManufacturing() {
 
 export async function getAero() {
   let options = {
-    url: 'http://localhost:8000/aero',
+    url: `${backendURL}/aero`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -62,7 +60,6 @@ export async function getAero() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -71,7 +68,7 @@ export async function getAero() {
 
 export async function getGas() {
   let options = {
-    url: 'http://localhost:8000/gas',
+    url: `${backendURL}/gas`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -79,7 +76,6 @@ export async function getGas() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -88,7 +84,7 @@ export async function getGas() {
 
 export async function getOil() {
   let options = {
-    url: 'http://localhost:8000/oil',
+    url: `${backendURL}/oil`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -96,7 +92,6 @@ export async function getOil() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -105,7 +100,7 @@ export async function getOil() {
 
 export async function getConsumption() {
   let options = {
-    url: 'http://localhost:8000/consumption',
+    url: `${backendURL}/consumption`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -113,7 +108,6 @@ export async function getConsumption() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -122,7 +116,7 @@ export async function getConsumption() {
 
 export async function getWorld() {
   let options = {
-    url: 'http://localhost:8000/world',
+    url: `${backendURL}/world`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -130,7 +124,6 @@ export async function getWorld() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -139,7 +132,7 @@ export async function getWorld() {
 
 export async function getNorthernAmerica() {
   let options = {
-    url: 'http://localhost:8000/northernamerica',
+    url: `${backendURL}/northernamerica`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -147,7 +140,6 @@ export async function getNorthernAmerica() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -156,7 +148,7 @@ export async function getNorthernAmerica() {
 
 export async function getCentralAmerica() {
   let options = {
-    url: 'http://localhost:8000/centralamerica',
+    url: `${backendURL}/centralamerica`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -164,7 +156,6 @@ export async function getCentralAmerica() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -173,7 +164,7 @@ export async function getCentralAmerica() {
 
 export async function getIndia() {
   let options = {
-    url: 'http://localhost:8000/india',
+    url: `${backendURL}/india`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -181,7 +172,6 @@ export async function getIndia() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -190,7 +180,7 @@ export async function getIndia() {
 
 export async function getUSA() {
   let options = {
-    url: 'http://localhost:8000/usa',
+    url: `${backendURL}/usa`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -207,7 +197,7 @@ export async function getUSA() {
 
 export async function getRussia() {
   let options = {
-    url: 'http://localhost:8000/russia',
+    url: `${backendURL}/russia`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -215,7 +205,6 @@ export async function getRussia() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -224,7 +213,7 @@ export async function getRussia() {
 
 export async function getPolitical() {
   let options = {
-    url: 'http://localhost:8000/political',
+    url: `${backendURL}/political`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -232,7 +221,6 @@ export async function getPolitical() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);
@@ -241,7 +229,7 @@ export async function getPolitical() {
 
 export async function getTechnological() {
   let options = {
-    url: 'http://localhost:8000/technological',
+    url: `${backendURL}/technological`,
     method: 'get',
     headers: {
       'content-type': 'application/json',
@@ -249,7 +237,6 @@ export async function getTechnological() {
   };
   try {
     let response = await axios(options);
-    // console.log(response);
     return response;
   } catch (error) {
     console.log(error);

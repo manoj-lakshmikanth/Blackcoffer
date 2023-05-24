@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './Components/HomePage';
+import { useState } from 'react';
+import './index.css';
+import userContext from './Context';
 
 function App() {
+  const [colorBlack, setColorBlack] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <userContext.Provider
+      value={{
+        colorBlack,
+        setColorBlack,
+      }}
+    >
+      <div
+        className="app"
+        style={{
+          backgroundColor: colorBlack === false ? 'white' : '#36454F',
+          color: colorBlack === false ? '#36454F' : 'white',
+          fontFamily: 'cursive',
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </div>
+    </userContext.Provider>
   );
 }
 
